@@ -1,0 +1,36 @@
+{
+  "name": "user-tasks-ui",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "ajv": "^6.5.0",
+    "grommet": "^1.10.1",
+    "history": "^4.7.2",
+    "jsonwebtoken": "^8.2.0",
+    "material-ui": "^0.20.0",
+    "moment": "^2.22.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-bootstrap": "^0.32.1",
+    "react-bootstrap-table": "^4.3.1",
+    "react-datepicker": "^1.4.1",
+    "react-dom": "^16.2.0",
+    "react-modal": "^3.4.4",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-tap-event-plugin": "^3.0.2",
+    "validator": "^9.4.1"
+  },
+  "devDependencies": {
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:8080"
+}

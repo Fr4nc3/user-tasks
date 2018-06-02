@@ -1,0 +1,25 @@
+{
+    "name": "user-tasks",
+    "version": "1.0.0",
+    "private": true,
+    "license": "MIT",
+    "scripts": {
+        "postinstall": "run-p install:api install:ui",
+        "install:api": "cd api && npm install",
+        "install:ui": "cd ui && npm install",
+        "start": "run-p start:api start:ui",
+        "start:api": "npm run start --prefix api",
+        "start:ui": "npm run start --prefix ui",
+        "build": "run-p build:api build:ui",
+        "build:api": "cd api && npm run build && cd ..",
+        "build:ui": "cd ui && npm run build && cd ..",
+        "prestart:docker": "npm run build",
+        "start:docker": "docker-compose -f docker/docker-compose.yml up -d --build",
+        "poststart:docker": "opn http://localhost:8000/",
+        "stop:docker": "docker-compose -f docker/docker-compose.yml down"
+    },
+    "devDependencies": {
+        "npm-run-all": "^4.0.2",
+        "opn-cli": "^3.1.0"
+    }
+}
